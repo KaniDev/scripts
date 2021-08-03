@@ -1,0 +1,8 @@
+#!/usr/bin/zsh
+var=`setxkbmap -query | egrep 'variant' | wc -l`
+if [[ $var == "1" ]]
+then
+	setxkbmap us
+else
+	setxkbmap us -variant intl
+fi
