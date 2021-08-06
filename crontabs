@@ -19,7 +19,7 @@
 # 
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
-# m h  dom mon dow   commandi
+# m h  dom mon dow   command
 
 @reboot /usr/local/bin/gitwatch -r git@github.com:KaniDev/configs.git /home/kani/.config
 @reboot /usr/local/bin/gitwatch -r git@github.com:KaniDev/scripts.git /home/kani/scripts
