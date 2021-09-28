@@ -1,3 +1,4 @@
+#!/bin/bash
 if [[ $1 == "build" ]]
 then
     if [[ -e build ]]
