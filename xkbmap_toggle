@@ -1,10 +1,11 @@
 #!/usr/bin/zsh
+expire = 500
 var=`setxkbmap -query | egrep 'variant' | wc -l`
 if [[ $var == "1" ]]
 then
 	setxkbmap us
-	notify-send "Keyboard Layout" "US-EN"
+	notify-send -t $expire "Keyboard Layout" "US-EN"
 else
 	setxkbmap us -variant intl
-	notify-send "Keyboard Layout" "US-INTL"
+	notify-send -t $expire "Keyboard Layout" "US-INTL"
 fi
