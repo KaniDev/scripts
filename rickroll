@@ -71,6 +71,8 @@ elif has? play; then
 fi
 audpid=$!
 
+echo "to stop: pkill curl"
+
 except KeyboardInterrupt:
   pass
 EOF
