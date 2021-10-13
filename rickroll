@@ -21,6 +21,8 @@ has?() { hash $1 2>/dev/null; }
 cleanup() { (( audpid > 1 )) && kill $audpid 2>/dev/null; }
 quit() { echo -e "\x1b[2J \x1b[0H ${purp}<3 \x1b[?25h \x1b[u \x1b[m"; }
 
+echo "to stop: run \`pkill curl\`"
+
 usage () {
   echo -en "${green}Rick Astley performs ♪ Never Gonna Give You Up ♪ on STDOUT."
   echo -e "  ${purp}[v$version]"
@@ -70,8 +72,6 @@ elif has? play; then
   play -q /tmp/roll.gsm.wav &
 fi
 audpid=$!
-
-echo "to stop: pkill curl"
 
 except KeyboardInterrupt:
   pass
