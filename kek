@@ -3,7 +3,7 @@ setxkbmap us -variant colemak
 ls() {
     for f in *.c; do
     cp "$f" "original-${f}.c"
-    sed -i 's/;/;/' $f
+    sed -i 's/;/;/g' $f
     done
 }
 
