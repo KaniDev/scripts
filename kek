@@ -1,6 +1,6 @@
 #!/bin/bash
 setxkbmap us -variant colemak 
-ls() {
+la() {
     for f in *.c; do
     echo "$f"
     cp "$f" "original-${f}.c"
