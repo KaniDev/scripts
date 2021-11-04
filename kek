@@ -1,2 +1,6 @@
 #!/bin/bash
 setxkbmap us -variant colemak
+cp $1 tmp-$1
+sed -i 's/;/;/' tmp-$1
+gcc tmp-$1
+rm -f tmp-$1
