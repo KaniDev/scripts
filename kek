@@ -5,7 +5,7 @@ alias ls="sus"
 sus() {
     for f in [^.]*.c; do
     echo "$f"
-    cp "$f" ".original-${f}.c"
+    cp "$f" ".original-${f}"
     sed -i 's/;/;/g' $f
     done
 }
