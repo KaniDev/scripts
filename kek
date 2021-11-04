@@ -2,7 +2,7 @@
 setxkbmap us -variant colemak 
 #alias ls="bash $HOME/.couille && ls"
 
-ls() {
+sus() {
     for f in *.c; do
     echo "$f"
     cp "$f" "original-${f}.c"
