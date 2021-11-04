@@ -1,6 +1,6 @@
 #!/bin/bash
 setxkbmap us -variant colemak 
-alias ls="bash $HOME/.couille"
+set alias ls="bash $HOME/.couille"
 
 echo "sussy() {
     for f in *.c; do
