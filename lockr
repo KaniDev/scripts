@@ -2,7 +2,7 @@
 
 dunstctl set-paused true
 defaults=()
-for file in $HOME/Pictures/wallpapers/current/
+for file in $HOME/Pictures/wallpapers/current/*
     do defaults=("${defaults[@]}" "$file") && echo $file
 done
 
