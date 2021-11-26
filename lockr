@@ -6,5 +6,5 @@ for file in $HOME/Pictures/wallpapers/current/*
     do defaults=("${defaults[@]}" "$file")
 done
 
-i3lock -n -i ${1:-"defaults[$RANDOM%2]} --inside-color=373445ff --ring-color=ffffffff --line-uses-inside --keyhl-color=2a313e --bshl-color=ff0000 --separator-color=00000000 --insidever-color=2a313e --insidewrong-color=ff0000 --ringver-color=ffffffff --ringwrong-color=ffffffff --ind-pos="x+86:y+1003" --radius=15 --verif-text="" --wrong-text="" --noinput-text=""
+i3lock -n -i ${1:"defaults[$RANDOM%2]} --inside-color=373445ff --ring-color=ffffffff --line-uses-inside --keyhl-color=2a313e --bshl-color=ff0000 --separator-color=00000000 --insidever-color=2a313e --insidewrong-color=ff0000 --ringver-color=ffffffff --ringwrong-color=ffffffff --ind-pos="x+86:y+1003" --radius=15 --verif-text="" --wrong-text="" --noinput-text=""
 dunstctl set-paused false
