@@ -1,5 +1,4 @@
 dunstctl set-paused true
-shopt -s nullglob
 defaults=($HOME/Pictures/wallpapers/current/*)
 for i in "${defaults[@]}"
     do echo $i
