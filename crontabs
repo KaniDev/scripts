@@ -21,6 +21,6 @@
 # 
 # m h  dom mon dow   command
 
-@reboot /usr/local/bin/gitwatch -r git@github.com:KaniDev/configs.git /home/kani/.config
-@reboot /usr/local/bin/gitwatch -r git@github.com:KaniDev/scripts.git /home/kani/scripts
+@reboot /usr/local/bin/gitwatch -r git@github.com:KaniDev/configs.git /home/kani/.config &
+@reboot /usr/local/bin/gitwatch -r git@github.com:KaniDev/scripts.git /home/kani/scripts &
 @reboot crontab -l > /home/kani/scripts/crontabs
