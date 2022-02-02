@@ -3,14 +3,10 @@ if [[ !($1) ]]; then
     echo "Specify a file or folder !"
     exit
 fi
-
-if [[ "$2" == "--set" ]]; then
-	pkill polybar
-	sh /home/kani/.config/polybar/shades/launch.sh
-fi
-
-wal -i $1 --backend $3
+pkill polybar
+/home/kani/.config/polybar/launch.sh &
+wal -i $1 --backend $2
 pkill feh
 feh -g +0 -g +380 --bg-fill "$(< .cache/wal/wal)"
-/home/kani/.config/polybar/shades/scripts/pywal.sh "$(< .cache/wal/wal)"
+#/home/kani/.config/polybar/shades/scripts/pywal.sh "$(< .cache/wal/wal)"
 
