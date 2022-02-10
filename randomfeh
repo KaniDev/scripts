@@ -6,4 +6,3 @@ do wals=("${wals[@]}" "$file")
 pkill feh
 feh -g +0 -g +380 --bg-fill "${wals[RANDOM % ${#wals[@]}]}"
 #/home/kani/.config/polybar/shades/scripts/pywal.sh "$(< .cache/wal/wal)"
-
