@@ -1,8 +1,9 @@
 #!/bin/bash
 
 wals=()
-for file in $1
-do wals=("${wals[@]}" "$file")
+for file in $1/*
+	do wals=("${wals[@]}" "$file")
+done
 pkill feh
 feh -g +0 -g +380 --bg-fill "$(-${wals[RANDOM % ${#wals[@]}]})"
 #/home/kani/.config/polybar/shades/scripts/pywal.sh "$(< .cache/wal/wal)"
