@@ -1,12 +1,9 @@
 #!/bin/bash
-if [[ !($1) ]]; then
-    echo "Specify a file or folder !"
-    exit
-fi
-pkill polybar
-/home/kani/.config/polybar/launch.sh &
-wal -i $1 --backend $2
+
+wals=()
+for file in $1
+do wals=("${wals[@]}" "$file")
 pkill feh
-feh -g +0 -g +380 --bg-fill "$(< .cache/wal/wal)"
+feh -g +0 -g +380 --bg-fill "${wals[RANDOM % ${#wals[@]}]}"
 #/home/kani/.config/polybar/shades/scripts/pywal.sh "$(< .cache/wal/wal)"
 
