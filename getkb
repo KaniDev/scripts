@@ -1,0 +1,2 @@
+#/bin/bash
+setxkbmap -query | grep -e layout -e variant | awk '{print $2}' | tr '\n' - | sed 's/-$//g'
