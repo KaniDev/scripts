@@ -3,6 +3,6 @@
 wals=()
 for file in $1
 	do wals=("${wals[@]}" "$file")
-        echo E
+        echo $1
 done
 feh -g +0 -g +380 --bg-fill "${wals[RANDOM % ${#wals[@]}]}"
