@@ -1,6 +1,6 @@
 batlevel=$(upower -i /org/freedesktop/UPower/devices/battery_BAT1 | grep -oP '\d+(?=%)' | head -n 1)
 if [[ $batlevel -gt 15 ]]; then
-    dunstify "Battery level" "$batlevel%" -h int:value:$batlevel
+    dunstify "Battery level" "$batlevel%" -h int:value:10
     exit 0
 fi
 dunstify -u critical "Low battery" -i /usr/share/icons/palenight/24/panel/battery-010.svg -h int:value:$batlevel
