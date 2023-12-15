@@ -1,0 +1,2 @@
+notify-send --urgency=critical "Low Battery" -i /usr/share/icons/palenight/24/panel/battery-010.svg
+aplay $HOME/scripts/batterycheck/lowbattery.wav
