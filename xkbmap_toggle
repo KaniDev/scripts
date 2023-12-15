@@ -1,5 +1,5 @@
 #!/usr/bin/zsh
-expire=400
+expire=500
 var=`setxkbmap -query | egrep 'variant' | wc -l`
 if [[ $var == "1" ]]
 then

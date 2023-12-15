@@ -1,0 +1,14 @@
+#!/bin/bash
+
+source_dir=$1
+dest_dir=$2
+date1="2023:01:24 00:00:00"
+date2="2023:02:25 23:59:59"
+
+for file in $(find "$source_dir" -type f -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png"); do
+    exif_date=$(exiv2 -g Exif.Image.DateTime -Pv "$file")
+    if [[ "$exif_date" > "$date1" ]] && [[ "$exif_date" < "$date2" ]]; then
+        cp "$file" "$dest_dir"
+    fi
+done
+
