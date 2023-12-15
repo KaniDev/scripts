@@ -3,4 +3,4 @@ if [[ $batlevel -gt 15 ]]; then
     exit 0
 fi
 dunstify -u critical "Low battery" -i /usr/share/icons/palenight/24/panel/battery-010.svg -h int:value:$batlevel
-aplay $HOME/scripts/pkmn_bw_low_health.wav
+# aplay $HOME/scripts/pkmn_bw_low_health.wav
