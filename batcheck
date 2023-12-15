@@ -1,2 +1,2 @@
-notify-send --urgency=critical "Low battery" -i /usr/share/icons/palenight/24/panel/battery-010.svg
+dunstify -u critical "Low battery" -i /usr/share/icons/palenight/24/panel/battery-010.svg -h 200
 aplay $HOME/scripts/pkmn_bw_low_health.wav
